@@ -1,17 +1,12 @@
 //Created functions that create random values
-function getRandomLower() {
-  var lowerCase = "abcdefghijklmnopqrstuvwxyz";
-  return lowerCase[Math.floor(Math.random() * lowerCase.length)];
-}
-
-function getRandomUpper() {
-  var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+function getRandomChar() {
+  var upperCase =
+    "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
   return upperCase[Math.floor(Math.random() * upperCase.length)];
 }
 
 function getRandomNumber() {
-  var numbers =
-    "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var numbers = "0123456789";
   return numbers[Math.floor(Math.random() * numbers.length)];
 }
 
@@ -78,7 +73,7 @@ if (selectPass === passwordCrit[0]) {
 
   //Invocamos createPassword con los par�metros (longitud de la cadena, funci�n a ejecutar)
   //El resultado lo guardamos en la variable password
-  password = createPassword(passwordLength, getRandomUpper);
+  password = createPassword(passwordLength, getRandomChar);
 } else if (selectPass === passwordCrit[2]) {
   passwordLength = prompt(
     "Now select password lenght min 8 charac. Max 128 charac."
